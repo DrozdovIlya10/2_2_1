@@ -23,13 +23,8 @@ public class CarDaoImp implements CarDao{
     @Override
     @SuppressWarnings("unchecked")
     public List<Car> listCars(String model) {
-        TypedQuery<Car> query=sessionFactory.getCurrentSession().createQuery("from Car where model = '\" + model + \"'\"");
+        TypedQuery<Car> query=sessionFactory.getCurrentSession().createQuery("from Car where model = '" + model + "'");
         return query.getResultList();
     }
-    /*@Override
-    public List<Car> userCar(String model) {
-        TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery(
-                "from Car where model = '" + model + "'" );
-        return query.getResultList();
-    }*/
+
 }

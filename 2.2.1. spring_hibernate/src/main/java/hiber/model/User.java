@@ -20,9 +20,6 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   /*@OneToOne(cascade = CascadeType.ALL)
-   @PrimaryKeyJoinColumn
-   private Car car;*/
    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY,
            cascade = CascadeType.ALL)
    private Car car;

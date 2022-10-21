@@ -8,8 +8,7 @@ public class Car {
 
     @Id
     @Column(name = "user_id")
-    /*@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
+
     private Long id;
     @Column(name = "model")
     private String model;
@@ -21,9 +20,7 @@ public class Car {
     @MapsId
     @JoinColumn(name = "user_id")
     private User user;
-    /*@OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;*/
+
 
     public User getUser() {
         return user;
@@ -35,12 +32,11 @@ public class Car {
 
     @Override
     public String toString() {
-        return
-                "model '" + model + '\'' +
-                ", series '" + series + "'";
+        return "model '" + model + '\'' + ", series '" + series + "'";
     }
 
     public Car() {}
+
     public Car(String model, int series) {
         this.model = model;
         this.series = series;

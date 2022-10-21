@@ -10,6 +10,4 @@ public interface CarService {
 
     List<Car> listCars(String model);
 
-
-    //public List<User> userCar(String model);
 }

@@ -8,5 +8,4 @@ import java.util.List;
 public interface CarDao {
     void add(Car car);
     List<Car> listCars(String model);
-   // public List<Car> userCar(String model);
 }
